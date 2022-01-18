@@ -17,12 +17,19 @@ function App() {
 
               <p>Dans ce tuto, on dois voir certains essentiels pour bon nombres de framework en JS</p>
               <ul>
-                <li> - dotenv</li>
-                <li> - axios/fetch</li>
-                <li> - loader quand fetch</li>
-                <li> - navigation et routing</li>
-                <li> - bases de react</li>
-                <li> - tailwind</li>
+                <li> - dotenv ❌</li>
+                <li> - axios/fetch ❌</li>
+                <li> - loader quand fetch gros spinner ❌</li>
+                <li> - navigation et routing ❌</li>
+                <li> - bases de react ❌</li>
+                <li> - tailwind ✅</li>
+                <li> - daisy ui ❌</li>
+                <li> - afficher meteo  img avec un switch img selon la valeur de temp  ❌</li>
+                <li> - aller en profondeur avec un fetch puis axios ❌</li>
+                <li> - découpage component ❌</li>
+                <li> - page 404 ❌</li>
+                <li> - input pour rechercher par ville ❌ ("http://api.airvisual.com/v2/city?city=Los Angeles&state=California&country=USA&key=")</li>
+
               </ul>
             </div>
           </div>

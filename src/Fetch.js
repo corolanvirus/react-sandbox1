@@ -1,5 +1,5 @@
 import { Component } from 'react'
-
+import './index.css';
 class Fetch extends Component {
     constructor(props) {
         super(props)
@@ -15,8 +15,9 @@ class Fetch extends Component {
             .then((jsonResponse) => {
                 this.setState({
                     loading: true,
-                    data: jsonResponse?.data
+                    data: jsonResponse?.data,
                 })
+
             })
     }
 
@@ -26,20 +27,29 @@ class Fetch extends Component {
             city,
             state,
             country,
+            current,
         } = data
 
+
+
+
+
+
         return (
-            <>     {
+            <div className='render_api'>     {
                 loading ?
                     <> <h1> Localisation </h1>
                         <p>{city}</p>
                         <p>{state}</p>
                         <p>{country}</p>
+                        <p>{current.toString()}</p>
+
+
                     </> :
                     <>
                         LOADING
                     </>
-            }</ >
+            }</div>
         )
     }
 }
