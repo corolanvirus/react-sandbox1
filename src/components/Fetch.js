@@ -1,5 +1,6 @@
 import { Component } from 'react'
-import './index.css';
+import Header from '../components/Header'
+
 class Fetch extends Component {
     constructor(props) {
         super(props)
@@ -9,7 +10,6 @@ class Fetch extends Component {
     }
 
     componentDidMount() {
-
         fetch(`http://api.airvisual.com/v2/nearest_city?key=bfbc0b56-6358-4017-b804-6613655faf1c`)
             .then((response) => response.json())
             .then((jsonResponse) => {
@@ -17,7 +17,6 @@ class Fetch extends Component {
                     loading: true,
                     data: jsonResponse?.data,
                 })
-
             })
     }
 
@@ -30,26 +29,22 @@ class Fetch extends Component {
             current,
         } = data
 
-
-
-
-
-
         return (
-            <div className='render_api'>     {
-                loading ?
-                    <> <h1> Localisation </h1>
-                        <p>{city}</p>
-                        <p>{state}</p>
-                        <p>{country}</p>
-                        <p>{current.toString()}</p>
-
-
-                    </> :
-                    <>
-                        LOADING
-                    </>
-            }</div>
+            <>
+                <Header />
+                <div className='render_api'>     {
+                    loading ?
+                        <>
+                            <h1> Localisation </h1>
+                            <p>{city}</p>
+                            <p>{state}</p>
+                            <p>{country}</p>
+                        </> :
+                        <>
+                            <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-64 w-64"></div>
+                        </>
+                }</div>
+            </>
         )
     }
 }

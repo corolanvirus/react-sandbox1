@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/Header';
+import About from './pages/About';
+import Fetch from './components/Fetch';
 import App from './App';
-
-import Fetch from './Fetch';
 import './index.css';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-    <Fetch />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
 
